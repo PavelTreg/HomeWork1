@@ -1,8 +1,8 @@
 {
   "name": "hws2",
-  "homepage": "https://github.com/PavelTreg/HomeWork1",
-  "version": "0.1.0",
+   "version": "0.1.0",
   "private": true,
+  "homepage":"https://PavelTreg.github.io/HomeWork1",
   "dependencies": {
     "@emotion/react": "11.10.4",
     "@emotion/styled": "11.10.4",

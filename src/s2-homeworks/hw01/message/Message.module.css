@@ -1,31 +1,37 @@
 .message {
-
+    margin-right: 70px;
+    display: flex;
+    align-items: end;
+    flex-direction: column;
 }
 
 .imageAndText {
-
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
 }
 
 .imageAndText img {
-
+    max-height: 48px;
 }
 
 .text {
-
+    margin-right: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding: 7px 25px 8px;
+    border-radius: 7px;
+    background-color: rebeccapurple;
+    box-shadow: 0 0 7px #000;
+    color: white;
+    position: relative;
 }
 
-.text:after {
-
-}
-
-.name {
-
-}
-
-.messageText {
-
-}
-
-.time {
-
+.text::after {
+    content: '';
+    position: absolute;
+    right: -13px; bottom: 0px; /* Положение треугольника */
+    border: 20px solid transparent; /* Прозрачные границы */
+    border-bottom: 20px solid rebeccapurple; /* Добавляем треугольник */
 }

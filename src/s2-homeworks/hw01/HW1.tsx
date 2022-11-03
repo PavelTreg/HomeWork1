@@ -5,6 +5,7 @@ import s2 from '../../s1-main/App.module.css'
 import FriendMessage from './friend-message/FriendMessage'
 import avatar from './avatar.png'
 
+
 /*
 * 1 - описать тип MessageType
 * 2 - описать тип MessagePropsType в файле Message.tsx
@@ -14,8 +15,19 @@ import avatar from './avatar.png'
 * */
 
 // нужно создать правильный тип вместо any
-export type MessageType = any
-
+export type MessageType = {
+    user:UserType
+    id:number
+    message: MessageType2
+}
+export type UserType ={
+    avatar: string
+    name: string
+}
+export type MessageType2 ={
+    text: string
+    time: string
+}
 // структуру объекта не менять
 export const message0: MessageType = {
     id: 0,
@@ -23,8 +35,8 @@ export const message0: MessageType = {
         avatar: avatar, // можно менять
         name: 'Some Name',  // можно менять
     },
-    message: {
-        text: 'some textsome textsome textsome textsome textsome textsome text', // можно менять
+    message:  {
+        text: 'Hy friend! How are you?', // можно менять
         time: '22:00', // можно менять
     },
 }
@@ -35,8 +47,8 @@ export const friendMessage0: MessageType = {
         name: 'Friend Name', // можно менять
     },
     message: {
-        text: 'зеркальное сообщение для тренировки css', // можно менять
-        time: '22:00', // можно менять
+        text: 'I dont know css', // можно менять
+        time: '22:10', // можно менять
     },
 }
 
@@ -49,6 +61,7 @@ const HW1 = () => {
                 <div>
                     <Message message={message0} />
                     <FriendMessage message={friendMessage0} />
+
                 </div>
 
                 {/*для автоматической проверки дз (не менять)*/}
